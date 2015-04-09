@@ -1,0 +1,5 @@
+digraph G2
+{
+4 -> 3 [label = "c"]
+2 -> 4 [label = "d"]
+}

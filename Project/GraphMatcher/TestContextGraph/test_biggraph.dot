@@ -1,0 +1,114 @@
+digraph Andrei_Phone
+{
+Owner -> Andrei
+Andrei -> Owner [label = "is"]
+Owner -> Phone [label = "of"]
+Samsung -> Phone [label = "manufacturer of the"]
+Andrei -> Teacher [label = "is"]
+Andrei -> "12h00" [label = "time at university"]
+"12h00" -> "Programming paradigms course" [label = "time of"]
+Andrei -> "Before Leaving Schedule" [label = "has"]
+"Before Leaving Schedule" -> "Today Schedule" [label = "from"]
+Today -> Wednesday
+Schedule -> Andrei [label = "of"]
+"Monday Schedule" -> Schedule [label = "part of"]
+"Monday Schedule" -> Monday [label = "valid on"]
+"Tuesday Schedule" -> Schedule [label = "part of"]
+"Tuesday Schedule" -> Tuesday [label = "valid on"]
+"Wednesday Schedule" -> Schedule [label = "part of"]
+"Wednesday Schedule" -> Wednesday [label = "valid on"]
+"Thursday Schedule" -> Schedule [label = "part of"]
+"Thursday Schedule" ->Thursday [label = "valid on"]
+"Friday Schedule" -> Schedule [label = "part of"]
+"Friday Schedule" -> Friday [label = "valid on"]
+"Saturday Schedule" -> Schedule [label = "part of"]
+"Saturday Schedule" -> Saturday [label = "valid on"]
+"Sunday Schedule" -> Schedule [label = "part of"]
+"Sunday Schedule" -> Sunday [label = "valid on"]
+"Sunday Schedule" -> Schedule [label = "has relaxed"]
+"Today Schedule" -> Schedule [label = "part of"]
+"Packing electronics and papers" -> "10 min" [label = "lasts"]
+"Today Schedule" -> "Packing electronics and papers" [label = "contains"]
+"Bathroom" -> "15 min" [label = "lasts"]
+"Today Schedule" -> "Bathroom" [label = "contains"]
+"Talk to apartment administration" -> "between 10 and 20 min" [label = "lasts"]
+"Today Schedule" -> "Talk to apartment administration" [label = "contains"]
+"Important phone calls" -> "5 min" [label = "lasts"]
+"Today Schedule" -> "Important phone calls" [label = "contains"]
+"Today Schedule" -> "Other activities" [label = "contains"]
+"Other activities" -> "between 10 and 15 min" [label = "lasts"]
+Phone -> "Last number"
+"Last number" -> 0741001002 [label = "is"]
+Phone -> "Last call"
+"Last call" -> "8 min 6 sec" [label = "has duration"]
+Phone -> "10 may 2013"
+"10 may 2013" -> Date [label = "is a"]
+"Today Schedule" -> "Teaching Course" [label = "contains"]
+"Teaching Course" -> "2 hours" [label = "lasts"]
+"Teaching Course" -> "Programming paradigms course"
+"Today Schedule" -> "Lunch" [label = "contains"]
+Lunch -> "1 hour" [label = "lasts"]
+"CFP" -> "document" [label="isa"];
+"AIConf" -> "30032011";
+"CFP" -> "30032011" [label="contains"];
+"CFP" -> "05012011" [label="contains"];
+"CFP" -> "conftime" [label="contains"];
+"05012011" -> "date" [label="isa"];
+"conftime" -> "interval" [label="isa"];
+"30032011" -> "date" [label="isa"];
+"AIConf" -> "CFP";
+"AIConf" -> "conftime";
+"CFP" -> "AIConf";
+Andrei -> CFP [label = "participates to"]
+Agent -> Smartphone [label = "contained"]
+Smartphone -> Andrei [label = "of"]
+Agent -> "Meeting Schedule" [label = "is maintaining"]
+"Meeting Schedule" -> Andrei [label = "of"]
+"Student meeting" -> "Meeting Schedule" [label = "part of"]
+"Professor meeting" -> "Meeting Schedule" [label = "part of"]
+Professor -> "Professor meeting" [label = "target of"]
+Student -> "Student meeting" [label = "target of"]
+"Current Meeting" -> "Professor meeting" [label = "part of"]
+"Current Meeting" -> "Professor Carmen" [label = "with"]
+"Monday, 10h00-11h00" -> "Free intervals" [label = "one of"]
+"Friday, 15h00-16h00" -> "Free intervals" [label = "one of"]
+"Wednesday, 14h00-18h00" -> "Free intervals" [label = "one of"]
+"Free intervals" -> "Professor Carmen" [label = "of"]
+"Closest meeting time" -> "Professor Carmen" [label = "with"]
+"Professor Carmen" -> Professor [label = "is a"]
+"Closest meeting time" -> "Wednesday, 14h00-18h00" [label = "takes place"]
+Andrei -> Late [label = "can be"]
+Late -> "Reschedule meeting" [label = "triggers"]
+"Reschedule meeting" -> "Professor Carmen" [label = "with"]
+"Reschedule meeting" -> "Next free time" [label = "to"]
+"Next free time" -> "Free intervals" [label = "from"]
+"System dashboard" -> Device [label = "part of"]
+"All events" -> Device [label = "part of"]
+"System dashboard" -> Information [label = "displays"]
+Information -> "All informations section" [label = "contains"]
+Information -> "Next 20 min section" [label = "contains"]
+"Next 20 min section" -> "Relevant information"
+"Relevant information" -> Information [label = "kind of"]
+"Relevant information" -> "Current user" [label = "for"]
+"Relevant information" -> "All  users" [label = "for"]
+"Current user" -> "Logged on user"
+"Logged on user" -> Andrei
+"Urgent email" -> "Relevant information" [label = "on top of"]
+"Relevant information" -> "Tasks" [label = "contains"]
+Reset -> "Cooling device"
+Tasks -> Reset [label = "contains"]
+Tasks -> "Order papers" [label = "contains"]
+"Order papers" -> "First Shelf" ["from"]
+Tasks -> "Water flower" [label = "contains"]
+"Water flower" -> "Flower" [label = "action on"]
+"Flower" -> Colocasia [label = "of type"]
+Tasks -> "Pick up" [label = "contains"]
+"Things to pick up" -> "Pick up" [label = "part of"]
+"Things to pick up" -> Pen [label = "contains"]
+"Things to pick up" -> Projector [label = "contains"]
+Projector -> Slides [label = "used for"]
+Slides -> "Multi-agent systems course" [label = "for"]
+"Things to pick up" -> "Key"
+"Key" -> "EG 404" [label = "of the room"]
+"Eg 404" -> "Closed" [label = "can be"]
+}

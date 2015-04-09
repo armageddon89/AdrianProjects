@@ -1,0 +1,14 @@
+digraph G {
+	"?#4" -> "document" [label="isa"];
+	"?#1" -> "?#4" [label="article"];
+	"?#2" -> "date" [label="isa"];
+	"?#1" -> "conference" [label="isa"];
+	"?#3" -> "?#2" [label="contains"];
+	"?#1" -> "?#2" [label="deadline"];
+	"?#3" -> "document" [label="isa"];
+	"?#1" -> "?#3" [label="CFP"];
+	"?#2" [label="?"];
+	"?#3" [label="?"];
+	"?#1" [label="?"];
+	"?#4" [label="?"];
+}

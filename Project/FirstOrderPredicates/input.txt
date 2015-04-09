@@ -1,0 +1,13 @@
+﻿p & q & r | s -> t
+p&!q->s<->t|r
+p & !p -> q
+!(p | r) | !q
+(!(p <-> q)) & (q -> (!p))
+
+!(p & (!(q | (!r))))
+
+((p | (!q)) & (q | (!r))) & (r | (!p))
+
+p & (q | r & (s | t)) <-> (!(p -> (q | r)))
+(prop1 -> prop2) & (fuge | T) | !F
+∀x (P(da) & Q(g()) | Q(x) | V(x)) | ∃yRt(y(h)) -> ∃y(!∀x P(x) & ∀z Hr(ff(x,yy,z)) & !∃p(!Q(p)))
